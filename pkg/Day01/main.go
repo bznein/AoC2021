@@ -12,18 +12,15 @@ func Solve(inputF string) (int, int) {
 	part1 := 0
 	part2 := 0
 	ints := input.InputToIntSlice(inputF)
-	curWindowSum := ints[2] + ints[1] + ints[0]
 
 	for i := 1; i < len(ints); i++ {
 		if ints[i] > ints[i-1] {
 			part1++
 		}
 		if i > 2 {
-			tempSum := ints[i] + ints[i-1] + ints[i-2]
-			if tempSum > curWindowSum {
+			if ints[i] > ints[i-3] {
 				part2++
 			}
-			curWindowSum = tempSum
 		}
 	}
 
