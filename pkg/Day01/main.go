@@ -17,10 +17,8 @@ func Solve(inputF string) (int, int) {
 		if ints[i] > ints[i-1] {
 			part1++
 		}
-		if i > 2 {
-			if ints[i] > ints[i-3] {
-				part2++
-			}
+		if i > 2 && ints[i] > ints[i-3] {
+			part2++
 		}
 	}
 
