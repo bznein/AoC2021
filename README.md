@@ -7,9 +7,8 @@ The repository is structured as follwos:
 - [pkg](./pkg) directory:
   - One package, named Day##, for the ## day of the month (e.g. [Day01](./pkg/Day01))
   - Every package presents the same interface: one exported method `func Solve(input string) (int,int)` which provides the answers for part 1 and part 2
-  - Auxiliary packages for visualization purposes and to gather common functionalities (or those that I believe will become shared in the future)
 - [cmd](./cmd) directory:
-  - [solver.go](./cmd/solver.go) is the main entrance point, it can be compiled into an executable that can either execute a specific day, or present the execution time of all days
+  - [solver.go](./cmd/solver.go) is the main entry point, it can be compiled into an executable that can either execute a specific day, or present the execution time of all days
   - [solver_test.go](./cmd/solver_test.go) provides unit testing to verify that refactoring doesn't break old days
     - *NOTE*: these are NOT unit tests on the examples provided in the puzzle. I fill them after solving the day to make sure I do not break old days when refactoring.
 
@@ -17,7 +16,7 @@ The repository is structured as follwos:
 ## Execution
 To execute unit tests, simply run `go test ./...` from the `root` directory (note: most packages don't have tests so far, so you might just care about running it inside `cmd`)
 
-To execute the solver, go into the `cmd` directory and build the executable: `go build solver.go`. This will create an executable called `solver`, which can be either used to solve a single day or to time the execution times of all days (note: visualization is also possible, but enabled only for few days- nonexisting or broken for the others)
+To execute the solver, go into the `cmd` directory and build the executable: `go build solver.go`. This will create an executable called `solver`, which can be either used to solve a single day or to time the execution times of all days 
 
 ### To execute a single day:
 
