@@ -9,8 +9,7 @@ import (
 
 func Solve(inputF string) (int, int) {
 	defer timing.TimeTrack(time.Now())
-	part1 := 0
-	part2 := 0
+	part1, part2 := 0, 0
 	ints := input.InputToIntSlice(inputF)
 
 	for i := 1; i < len(ints); i++ {
