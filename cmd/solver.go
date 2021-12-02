@@ -11,10 +11,12 @@ import (
 	"github.com/bznein/AoC2020/pkg/input"
 )
 
+const days = 2
+
 func readAllInputs() []string {
 	defer timing.TimeTrack(time.Now())
-	inputs := make([]string, 25)
-	for i := 0; i < 25; i++ {
+	inputs := make([]string, days)
+	for i := 0; i < days; i++ {
 		inputs[i] = input.ReadInput(fmt.Sprintf("../inputs/%d.txt", i+1))
 	}
 	return inputs
@@ -24,6 +26,7 @@ func timeSolves() {
 	defer timing.TimeTrack(time.Now())
 	inputs := readAllInputs()
 	Day01.Solve(inputs[0])
+	Day02.Solve(inputs[1])
 }
 
 func solve(day int) (int, int) {
