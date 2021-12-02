@@ -1,8 +1,6 @@
 package Day02
 
 import (
-	"strconv"
-	"strings"
 	"time"
 
 	"github.com/bznein/AoC2020/pkg/input"
@@ -12,16 +10,14 @@ import (
 func Solve(inputF string) (int, int) {
 	defer timing.TimeTrack(time.Now())
 	part1, part2 := 0, 0
-	strs := input.InputToStringSlice(inputF)
 
 	depth := []int{0, 0}
 	pos := 0
 	aim := 0
-	for _, s := range strs {
-		splittedS := strings.Split(s, " ")
-		command := splittedS[0][0]
+	for _, s := range input.InputToSpaceSplittedStringSlice(inputF) {
+		command := s[0][0]
 
-		l, _ := strconv.Atoi(splittedS[1])
+		l := input.AsInt(s[1])
 		switch command {
 		case 'f':
 			pos += l

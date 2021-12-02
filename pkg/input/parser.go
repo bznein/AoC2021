@@ -37,6 +37,15 @@ func InputToStringSlice(input string) []string {
 	return strings.Split(input, "\n")
 }
 
+func InputToSpaceSplittedStringSlice(input string) [][]string {
+	strs := InputToStringSlice(input)
+	splittedStrings := make([][]string, len(strs))
+	for i, s := range strs {
+		splittedStrings[i] = strings.Split(s, " ")
+	}
+	return splittedStrings
+}
+
 func AsInt(s string) int {
 	i, err := strconv.Atoi(s)
 	if err != nil {
