@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/bznein/AoC2020/pkg/Day01"
+	"github.com/bznein/AoC2020/pkg/Day02"
 	"github.com/bznein/AoC2020/pkg/timing"
 
 	"github.com/bznein/AoC2020/pkg/input"
@@ -31,6 +32,8 @@ func solve(day int) (int, int) {
 	switch day {
 	case 1:
 		return Day01.Solve(inputF)
+	case 2:
+		return Day02.Solve(inputF)
 	}
 	return -1, -1
 }

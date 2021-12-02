@@ -10,6 +10,7 @@ var solveTests = []struct {
 	part2 int
 }{
 	{1, 1167, 1130},
+	{2, 1882980, 1971232560},
 }
 
 func TestSolver(t *testing.T) {

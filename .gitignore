@@ -19,3 +19,5 @@ inputs/
 /cmd/.DS_Store
 
 */cmd
+cmd/solver
+vendor/
