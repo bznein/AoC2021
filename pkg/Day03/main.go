@@ -1,7 +1,6 @@
 package Day03
 
 import (
-	"fmt"
 	"strconv"
 	"time"
 
@@ -41,7 +40,6 @@ func Solve(inputF string) (int, int) {
 	oxigenStr := filterValues(strs, 0, '1')
 	co2Str := filterValues(strs, 0, '0')
 
-	fmt.Printf("Oxigen: %s, cco2: %s\n", oxigenStr, co2Str)
 	oxigen, _ := strconv.ParseInt(oxigenStr, 2, 64)
 	co2, _ := strconv.ParseInt(co2Str, 2, 64)
 	return gamma * epsilon, int(oxigen) * int(co2)
