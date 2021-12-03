@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bznein/AoC2020/pkg/timing"
+	"github.com/bznein/AoC2021/pkg/timing"
 )
 
 func ReadInput(path string) string {

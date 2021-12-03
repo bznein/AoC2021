@@ -3,8 +3,8 @@ package Day01
 import (
 	"time"
 
-	"github.com/bznein/AoC2020/pkg/input"
-	"github.com/bznein/AoC2020/pkg/timing"
+	"github.com/bznein/AoC2021/pkg/input"
+	"github.com/bznein/AoC2021/pkg/timing"
 )
 
 func Solve(inputF string) (int, int) {

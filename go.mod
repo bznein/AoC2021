@@ -1,4 +1,4 @@
-module github.com/bznein/AoC2020
+module github.com/bznein/AoC2021
 
 go 1.15
 
