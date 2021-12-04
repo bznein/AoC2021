@@ -1,6 +1,7 @@
 package input
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"strconv"
@@ -49,7 +50,7 @@ func InputToSpaceSplittedStringSlice(input string) [][]string {
 func AsInt(s string) int {
 	i, err := strconv.Atoi(s)
 	if err != nil {
-		panic("Called AsInt with non-int string")
+		panic(fmt.Sprintf("Called AsInt with non-int string: %s", s))
 	}
 	return i
 }
