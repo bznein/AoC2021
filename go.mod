@@ -8,6 +8,9 @@ require (
 	github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3 // indirect
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/nsf/termbox-go v0.0.0-20201124104050-ed494de23a00 // indirect
+	github.com/nubbel/go-regressions v0.0.0-20170201150611-50da7c0f8789
+	github.com/sajari/regression v1.0.1 // indirect
 	github.com/spf13/pflag v1.0.5
 	golang.org/x/tools v0.0.0-20201218024724-ae774e9781d2 // indirect
+	gonum.org/v1/gonum v0.9.3 // indirect
 )
