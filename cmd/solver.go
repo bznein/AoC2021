@@ -13,12 +13,13 @@ import (
 	"github.com/bznein/AoC2021/pkg/Day07"
 	"github.com/bznein/AoC2021/pkg/Day08"
 	"github.com/bznein/AoC2021/pkg/Day09"
+	"github.com/bznein/AoC2021/pkg/Day10"
 	"github.com/bznein/AoC2021/pkg/timing"
 
 	"github.com/bznein/AoC2021/pkg/input"
 )
 
-const days = 9
+const days = 10
 
 func readAllInputs() []string {
 	defer timing.TimeTrack(time.Now())
@@ -41,6 +42,7 @@ func timeSolves() {
 	Day07.Solve(inputs[6])
 	Day08.Solve(inputs[7])
 	Day09.Solve(inputs[8])
+	Day10.Solve(inputs[9])
 }
 
 func solve(day int) (int, int) {
@@ -65,6 +67,8 @@ func solve(day int) (int, int) {
 		return Day09.Solve(inputF)
 	case 9:
 		return Day09.Solve(inputF)
+	case 10:
+		return Day10.Solve(inputF)
 	}
 	return -1, -1
 }
