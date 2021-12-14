@@ -31,6 +31,7 @@ func Solve(inputF string) (int, int) {
 	start := ints[0]
 
 	rules := rule{}
+	charOccurrences := map[byte]int{}
 	for i := 2; i < len(ints); i++ {
 		splitted := strings.Split(ints[i], " -> ")
 		rules[splitted[0]] = splitted[1]
@@ -38,8 +39,11 @@ func Solve(inputF string) (int, int) {
 
 	pairs := map[string]int{}
 
-	for j := 0; j < len(start)-1; j++ {
-		pairs[start[j:j+2]]++
+	for j := 0; j < len(start); j++ {
+		if j < len(start)-1 {
+			pairs[start[j:j+2]]++
+		}
+		charOccurrences[start[j]]++
 	}
 
 	for i := 0; i < stepsP2; i++ {
@@ -53,26 +57,21 @@ func Solve(inputF string) (int, int) {
 				}
 				pairs[string(s[0])+r] += v
 				pairs[r+string(s[1])] += v
+				charOccurrences[r[0]] += v
 			}
 		}
 		if i == stepsP1-1 {
-			part1 = getAnswer(pairs, start)
+			part1 = getAnswer(charOccurrences, start)
 		}
 
 	}
 
-	part2 = getAnswer(pairs, start)
+	part2 = getAnswer(charOccurrences, start)
 
 	return part1, part2
 }
 
-func getAnswer(pairs map[string]int, start string) int {
-	charOccurrences := map[byte]int{}
-
-	charOccurrences[start[0]]++
-	for k, v := range pairs {
-		charOccurrences[k[1]] += v
-	}
+func getAnswer(charOccurrences map[byte]int, start string) int {
 
 	min := charOccurrences[0]
 	max := min
