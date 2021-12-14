@@ -14,6 +14,10 @@ import (
 	"github.com/bznein/AoC2021/pkg/Day08"
 	"github.com/bznein/AoC2021/pkg/Day09"
 	"github.com/bznein/AoC2021/pkg/Day10"
+	"github.com/bznein/AoC2021/pkg/Day11"
+	"github.com/bznein/AoC2021/pkg/Day12"
+	"github.com/bznein/AoC2021/pkg/Day13"
+	"github.com/bznein/AoC2021/pkg/Day14"
 	"github.com/bznein/AoC2021/pkg/timing"
 
 	"github.com/bznein/AoC2021/pkg/input"
@@ -43,6 +47,10 @@ func timeSolves() {
 	Day08.Solve(inputs[7])
 	Day09.Solve(inputs[8])
 	Day10.Solve(inputs[9])
+	Day11.Solve(inputs[10])
+	Day12.Solve(inputs[11])
+	Day13.Solve(inputs[12])
+	Day14.Solve(inputs[13])
 }
 
 func solve(day int) (int, int) {
@@ -69,6 +77,14 @@ func solve(day int) (int, int) {
 		return Day09.Solve(inputF)
 	case 10:
 		return Day10.Solve(inputF)
+	case 11:
+		return Day11.Solve(inputF)
+	case 12:
+		return Day12.Solve(inputF)
+	case 13:
+		return Day13.Solve(inputF)
+	case 14:
+		return Day14.Solve(inputF)
 	}
 	return -1, -1
 }
