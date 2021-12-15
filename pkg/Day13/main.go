@@ -106,7 +106,7 @@ func printPaper(points map[coords]bool) {
 		for x := minX; x <= maxX; x++ {
 			_, ok := points[coords{x, y}]
 			if ok {
-				fmt.Printf("|")
+				fmt.Printf("█")
 			} else {
 				fmt.Printf(" ")
 			}
